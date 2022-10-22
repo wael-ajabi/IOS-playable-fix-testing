@@ -4,7 +4,7 @@
 <title>Vans Idle</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-<script src="mraid.js"></script>
+<script src="./mraid.js"></script>
 <style>
 	#progress{
 		position		: absolute;
@@ -778,34 +778,34 @@ function onWindowResize() {
 
 	renderer.setSize( window.innerWidth, window.innerHeight );
 }
-// document.getElementById("install").addEventListener("click", ()=>{
-// 	if(MraidReady)
-// 		GoApp()
-// });
-// document.getElementById("unlock").addEventListener("click", ()=>{
-// 	if(MraidReady)
-// 		GoApp()
-// });
+document.getElementById("install").addEventListener("click", ()=>{
+	if(MraidReady)
+		GoApp()
+});
+document.getElementById("unlock").addEventListener("click", ()=>{
+	if(MraidReady)
+		GoApp()
+});
 
-// if (mraid.getState() === 'loading') {
-//     mraid.addEventListener('ready', onSdkReady);
-// } else {
-//     onSdkReady(); 
-// }
-// function onSdkReady() {
-//   MraidReady = true;// if true you can call GoApp for the game
-//   console.log("MraidReady -----------------",MraidReady);
-//   console.log("User-agent header: " + navigator.userAgent);
+if (mraid.getState() === 'loading') {
+    mraid.addEventListener('ready', onSdkReady);
+} else {
+    onSdkReady(); 
+}
+function onSdkReady() {
+  MraidReady = true;// if true you can call GoApp for the game
+  console.log("MraidReady -----------------",MraidReady);
+  console.log("User-agent header: " + navigator.userAgent);
 
-// 	mraid.addEventListener("sizeChange", onWindowResize);
-// }
-// function GoApp(){
-//   if(navigator.userAgent.indexOf("Android") != -1){
-//     mraid.open("https://play.google.com/store/apps/details?id=com.AppSwim.VansIdle");
-//   }else{
-//     mraid.open("https://apps.apple.com/us/app/van-idle/id1620241864");
-//   }
-// }
+	mraid.addEventListener("sizeChange", onWindowResize);
+}
+function GoApp(){
+  if(navigator.userAgent.indexOf("Android") != -1){
+    mraid.open("https://play.google.com/store/apps/details?id=com.AppSwim.VansIdle");
+  }else{
+    mraid.open("https://apps.apple.com/us/app/van-idle/id1620241864");
+  }
+}
 
 </script>
 </body>
